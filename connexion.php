@@ -14,8 +14,8 @@ if ($_POST != null)
 
         $mdp = md5($mdp);
 
-        $email= mysqli_real_escape_string($conn, $email);
-        $mdp= mysqli_real_escape_string($conn, $mdp);
+        $email= ($conn, $email);
+        $mdp= ($conn, $mdp);
 
         $sql = "SELECT utilisateurs.id FROM utilisateurs where email = '" . $email . "' and mdp = '" . $mdp . "'";
 
